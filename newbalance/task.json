@@ -1,0 +1,39 @@
+{
+    "id": "FLOWS/twino/newbalance",
+    "lambda": "lambda-arn",
+    "role": "iam-arn",
+    "input": {
+        "examples": {
+            "sampleobject": {
+              "account":{
+                "username":"user1",
+                "password":"password1"
+              }
+            }
+
+        }
+    },
+    "output": {
+        "examples": {
+            "result": {
+                "deposits": 1000,
+                "withdrawals": -500,
+                "xirr": 10,
+                "investmentBalance": 1000,
+                "lossOnWriteoff": 0,
+                "income": 100,
+                "interestWithoutCurrencyFluctuations": 100,
+                "currencyFluctuations": 0,
+                "accountValue": 2000,
+                "investments": 2000,
+                "penalties": 0,
+                "firstBuyShareDate": [2019, 1, 1, 0, 0, 0, 0],
+                "campaigns": 0
+            }
+        }
+    },
+    "type": "poller",
+    "description": "triggers whenever a new account balance is available",
+    "icon": "https://flows.app/favicon.png",
+    "billing": "standard"
+}
